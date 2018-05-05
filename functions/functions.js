@@ -90,14 +90,9 @@ app.init = function() {
     setTimeout(app.loser, 30000);
 }
 
-// Good or bad RNG
-app.goodOrBad = function() {
-    let gob = Math.floor(Math.random()*10) + 1;
-    return gob;
-}
-
 // Where Dougie Spawns 
-app.where = function() {
+ app.where = function() {
+    //  Location randomizer
     let location = Math.floor(Math.random()*7) + 1;
    
     if (location === 1) {
