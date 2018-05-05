@@ -53,10 +53,12 @@ $(function() {
    $(".happyDoug").on('click', function() {
         score = score + 1;
         console.log(`+1`);
+        $('.activeDoug').removeClass('pop');
    });
    $(".angryDoug").on('click', function() {
        score = score - 2;
        console.log(`-2`);
+       $('.activeDoug').removeClass('pop');
    });
 });
 
