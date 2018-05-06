@@ -104,7 +104,6 @@ body {
     max-height: 568px;
     background: url(../assets/backDoug.png);
     padding: 5px;
-   
 }
 
 /*----------------Title Screen----------------*/
@@ -175,7 +174,6 @@ button:hover {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
     background: rgb(4, 214, 214);
     border-radius: 10px;
     border: beige 2px solid;

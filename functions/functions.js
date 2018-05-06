@@ -48,6 +48,7 @@ $(function() {
         finalScore = 0;
         score = 0;
         timeMultiplier = 0;
+        $('#scoreTracker').html(`<p>Your Score is ${score}</p>`);
    });
 
    $(".happyDoug").on('click', function() {
@@ -78,16 +79,14 @@ app.init = function() {
     let timer2 = setTimeout(app.gameOver, 30000);
 
     // when done button is clicked it clears the timers
-    $(".done").click(function () {
+    $(".done").click(function() {
     clearInterval(timer);
     clearTimeout(timer2);
+    console.log('clearing');
     });
 
     // Kills spawns at 35 seconds 
-    setTimeout(() => { clearInterval(timer); app.spawn; }, 34000);
-
-    // Turns the score to 0 if the time is past 30 seconds.
-    setTimeout(app.loser, 30000);
+    setTimeout(() => { clearInterval(timer); app.spawn; }, 30000);
 }
 
 // Where Dougie Spawns 
@@ -130,13 +129,6 @@ app.init = function() {
 // hides Dougie
 app.hide = function() {
     $('.activeDoug').removeClass('pop');
-}
-
-// Makes the score = 0
-app.loser = function() {
-    if (score > 0) {
-        score = score * 0;
-    } 
 }
 
 // Automatically runs the result screen when the 30 seconds are up
