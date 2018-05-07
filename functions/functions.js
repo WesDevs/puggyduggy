@@ -36,7 +36,6 @@ $(function() {
             console.log('x2');
             $('.results').html(`Your Final Score is ${finalScore}`);
         };
-
        $(".finalScreen").show();
        $(".titleWrapper").hide();
        $(".instructionsWrapper").hide();
@@ -56,6 +55,7 @@ $(function() {
         console.log(`+1`);
         $('.activeDoug').removeClass('pop');
    });
+   
    $(".angryDoug").on('click', function() {
        score = score - 2;
        console.log(`-2`);
